@@ -5,6 +5,6 @@ This repository is a learning tutorial i am embarking that hosts a backend appli
 
 ## Stack
 - MongoDB
-- Express.js
-- Node.js
+- Express
+- Node
 
