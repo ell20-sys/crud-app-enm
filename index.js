@@ -13,7 +13,7 @@ const Product = require('./modules/product.module');
 app.use(express.json());
 
 // Environment variables
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const dbUrl = process.env.DATABASE_URL;
 
 // Define routes
