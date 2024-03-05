@@ -8,3 +8,13 @@ This repository is a learning tutorial i am embarking that hosts a backend appli
 - Express
 - Node
 
+## Installation
+```
+npm install
+```
+
+## Things to note
+- MongoDB connection string is stored in a .env file
+- Port number is set to 3000 in the .env file
+
+

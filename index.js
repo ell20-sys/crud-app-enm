@@ -1,10 +1,15 @@
+require('dotenv').config();
+// console.log(process.env) 
 const express = require('express');
 const mongoose = require('mongoose');
 const Product = require('./modules/product.module');  
 const app = express();
 
 app.use(express.json());
-const port = process.env.PORT || 3000;
+
+// env vars
+const port = process.env.PORT;
+const dbUrl = process.env.DATABASE_URL;
 
 
 app.get('/', (req, res) => {
@@ -36,7 +41,7 @@ app.post('/api/products', async (req, res) => {
   }
 })
 
-mongoose.connect('mongodb+srv://<dbusername>:<dbpassword>.rhpmdya.mongodb.net/<clusterName>?retryWrites=true&w=majority&appName=<appName>')
+mongoose.connect(dbUrl)
 .then(() => {
   console.log('Connected to MongoDB')
   app.listen(port, () => {
