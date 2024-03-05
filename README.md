@@ -15,6 +15,6 @@ npm install
 
 ## Things to note
 - MongoDB connection string is stored in a .env file
-- Port number is set to 3000 in the .env file
+- Port number is set to 3000 in the .env file (can be changed to suitable port)
 
 
