@@ -11,6 +11,8 @@ const Product = require('./modules/product.module');
 
 // Middleware
 app.use(express.json());
+// "Added middleware to parse incoming URL-encoded data using Express's built-in 'express.urlencoded()' function with extended option set to 'false' for improved security and performance."
+app.use(express.urlencoded({ extended: false }));
 
 // Environment variables
 const port = process.env.PORT || 3000;
