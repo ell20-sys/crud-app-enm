@@ -1,20 +1,60 @@
-# crud-app-enm
+# CRUD App with MongoDB, Express, and Node.js
 
-## Description
-This repository is a learning tutorial i am embarking that hosts a backend application designed to execute Create, Read, Update, and Delete (CRUD) operations with an API for managing data.
+## Overview
+This repository hosts a simple CRUD (Create, Read, Update, Delete) API built with MongoDB, Express, and Node.js. It provides endpoints to manage products, including retrieving all products, retrieving a single product, creating a new product, updating an existing product, and deleting a product.
 
 ## Stack
-- MongoDB
-- Express
-- Node
+- MongoDB: A NoSQL database used for data storage.
+- Express: A minimalist web framework for Node.js used to build the RESTful API.
+- Node.js: A JavaScript runtime environment used to execute server-side code.
 
 ## Installation
-```
-npm install
-```
+1. Clone the repository:
+```git clone https://github.com/ell20-sys/crud-app-enm.git```
 
-## Things to note
-- MongoDB connection string is stored in a .env file
-- Port number is set to 3000 in the .env file (can be changed to suitable port)
+2. Navigate to the project directory:
+```cd crud-app-enm```
+
+3. Install dependencies:
+```npm install```
+
+
+## Configuration
+- MongoDB Connection: Ensure you have MongoDB installed locally or set up a MongoDB Atlas cluster. Update the connection string in the `.env` file with your MongoDB URI.
+- Port Configuration: The default port for the server is 3000. You can change it by modifying the `PORT` variable in the `.env` file.
+
+## Usage
+### Starting the server
+
+- Production level:
+```npm run serve```
+
+- Development level:
+```npm run dev```
+
+
+## API Endpoints
+- **GET /api/products**: Retrieve all products.
+- **GET /api/products/:id**: Retrieve a single product by ID.
+- **POST /api/products**: Create a new product.
+- **PUT /api/products/:id**: Update an existing product by ID.
+- **DELETE /api/products/:id**: Delete a product by ID.
+
+## Directory Structure
+- `index.js`: Entry point of the application.
+- `models/product.model.js`: Defines the MongoDB schema for the Product model.
+- `controllers/product.controller.js`: Implements CRUD operations for managing products.
+- `routes/product.route.js`: Defines API endpoints for product-related operations.
+
+## Environment Variables
+- **PORT**: Port number for the server. Default is 3000.
+- **DATABASE_URL**: MongoDB connection string.
+
+## Contributing
+Contributions are welcome. Feel free to open an issue or submit a pull request.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
 
 
